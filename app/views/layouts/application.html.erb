@@ -3,35 +3,18 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= content_for?(:title) ? yield(:title) : "The Idea app" %></title>
-    <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "Rails Bootstrap" %>">
+    <title><%= content_for?(:title) ? yield(:title) : "Myapp" %></title>
     <meta name="description" content="">
-    <meta name="author" content=""> 
-    <%= stylesheet_link_tag    "Bootstrap", :media => "all" %>
-    <%= javascript_include_tag "Bootstrap" %>
+    <meta name="author" content="">
+    <%= stylesheet_link_tag    "", :media => "all" %>
+    <%= javascript_include_tag "" %>
     <%= csrf_meta_tags %>
     <%= yield(:head) %>
   </head>
   <body>
     <header class="navbar navbar-fixed-top">
-      <div class="navbar-inner">
+      <nav class="navbar-inner">
         <div class="container">
-          <a class="brand" href="/">The Idea app</a>
-          <ul class="nav">
-            <li class="active"><a href="/ideas">Ideas</a></li>
-          </ul>
-          <p class="navbar-text pull-right">
-            <% if user_signed_in? %>
-              Logged in as <strong><%= current_user.email %></strong>.
-              <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
-              <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
-            <% else %>
-              <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
-              <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
-            <% end %>
-          </p>
-        </div>
-       </div>
           <%= render 'layouts/navigation' %>
         </div>
       </nav>
