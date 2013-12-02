@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><%= content_for?(:title) ? yield(:title) : "The Idea app" %></title>
     <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "Rails Bootstrap" %>">
-    <!-- <meta name="description" content="">
-    <meta name="author" content=""> -->
-    <%= stylesheet_link_tag    "application", :media => "all" %>
-    <%= javascript_include_tag "application" %>
+    <meta name="description" content="">
+    <meta name="author" content=""> 
+    <%= stylesheet_link_tag    "Bootstrap", :media => "all" %>
+    <%= javascript_include_tag "Bootstrap" %>
     <%= csrf_meta_tags %>
     <%= yield(:head) %>
   </head>
