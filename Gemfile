@@ -7,6 +7,8 @@ gem 'rails', '3.2.13'
 
 gem 'sqlite3'
 gem 'carrierwave'
+gem 'mini_magick'
+
 gem 'devise'
 gem 'bootstrap-sass'
 gem 'simple_form'
